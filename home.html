@@ -47,12 +47,14 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown mr-3">
-                            <a class="nav-link" href="#" id="navbar3" role="button" aria-haspopup="true"
+                            <a class="nav-link" href="blog.html" id="navbar3" role="button" aria-haspopup="true"
                                 aria-expanded="false" style="color: black;">Blog</a>
                         </li>
                         <li class="nav-item dropdown mr-3">
-                            <a class="nav-link" href="https://api.whatsapp.com/send/?phone=6282127832456&text&type=phone_number&app_absent=0" id="navbar4" role="button" aria-haspopup="true"
-                                aria-expanded="false" style="color: black;">Contact Us</a>
+                            <a class="nav-link"
+                                href="https://api.whatsapp.com/send/?phone=6282127832456&text&type=phone_number&app_absent=0"
+                                id="navbar4" role="button" aria-haspopup="true" aria-expanded="false"
+                                style="color: black;">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -118,7 +120,8 @@
                         Anda!</p>
                     <div class="row">
                         <div class="col">
-                            <a href="https://api.whatsapp.com/send/?phone=6282127832456&text&type=phone_number&app_absent=0" class="btn btn-block" style="width: 30%; background-color:#aff78d;">Pesan
+                            <a href="https://api.whatsapp.com/send/?phone=6282127832456&text&type=phone_number&app_absent=0"
+                                class="btn btn-block" style="width: 30%; background-color:#aff78d;">Pesan
                                 Sekarang</a>
                         </div>
                     </div>
@@ -246,67 +249,84 @@
         </div>
 
         <div class="container-lg py-2 rounded mt-5 frame2" style="background-color: #f2f1fa;">
-            <form>
+            <form id="myForm">
                 <div class="form-row">
                     <div class="form-group col-md-6 pr-3">
                         <label for="inputNama">Nama</label>
-                        <input type="email" class="form-control" id="inputNama">
+                        <input type="text" class="form-control" id="inputNama" required>
                     </div>
                     <div class="form-group col-md-6 pl-3">
                         <label for="inputPemesanan">Rencana Pemesanan</label>
                         <select id="inputPemesanan" class="form-control">
                             <option selected>Pilih Disini</option>
-                            <option>...</option>
+                            <option>Private Office</option>
+                            <option>Daily Pass</option>
+                            <option>Flexible Desk</option>
+                            <option>Dedicated Desk</option>
+                            <option>Event Space</option>
+                            <option>Meeting Room</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6 pr-3">
                         <label for="inputEmail">Email</label>
-                        <input type="email" class="form-control" id="inputEmail">
+                        <input type="email" class="form-control" id="inputEmail" required>
                     </div>
                     <div class="form-group col-md-6 pl-3">
                         <label for="inputJmlOrang">Jumlah Orang</label>
                         <select id="inputJmlOrang" class="form-control">
-                            <option selected>Pilih Disini</option>
-                            <option>...</option>
+                            <option value="" selected disabled>Pilih Disini</option>
+                            <option>1-9</option>
+                            <option>10-20</option>
+                            <option>21-30</option>
+                            <option>31-40</option>
+                            <option>41-50</option>
+                            <option>50+</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6 pr-3">
                         <label for="inputWA">Nomor WhatsApp</label>
-                        <input type="email" class="form-control" id="inputWA">
+                        <input type="text" class="form-control" id="inputWA" required>
                     </div>
                     <div class="form-group col-md-6 pl-3">
                         <label for="inputKantor">Kantor</label>
                         <select id="inputKantor" class="form-control">
-                            <option selected>Pilih Disini</option>
-                            <option>...</option>
+                            <option value="" selected disabled>Pilih Disini</option>
+                            <option>Panama</option>
+                            <option>Pollock</option>
+                            <option>Paradis</option>
+                            <option>Parrot</option>
+                            <option>Polonia</option>
+                            <option>Pendragon</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6 pr-3">
                         <label for="inputPerusahaan">Nomor Perusahaan</label>
-                        <input type="email" class="form-control" id="inputPerusahaan">
+                        <input type="text" class="form-control" id="inputPerusahaan">
                     </div>
                     <div class="form-group col-md-6 pl-3">
                         <label for="inputContact">Ingin Di Contact Dengan</label>
                         <select id="inputContact" class="form-control">
-                            <option selected>Pilih Disini</option>
-                            <option>...</option>
+                            <option value="" selected disabled>Pilih Disini</option>
+                            <option>WhatsApp</option>
+                            <option>Email</option>
                         </select>
                     </div>
                 </div>
                 <center>
-                    <a type="submit" class="btn btn-dark" style="width: 35%; margin: 50px; padding: 5px;">Submit</a>
+                    <button type="submit" class="btn btn-dark" style="width: 35%; margin: 50px; padding: 5px;"
+                        id="submitButton">Submit</button>
                 </center>
             </form>
         </div>
     </div>
 
-    <div class="container-fluid py-5" style="background-color: black;">
+    <div class="container-fluid py-5 mt-3" style="background-color: black;">
         <div class="row">
             <div class="col-md-6">
                 <div class="accordion mt-5" id="accordionExample">
@@ -316,16 +336,17 @@
                             <h2 class="mb-0">
                                 <button class="btn btn-light btn-block text-left" type="button" data-toggle="collapse"
                                     data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Pertanyaan
+                                    <p style="font-family: 'Roboto-Regular', Helvetica, sans-serif; font-size: 30px;"><strong>Apa itu WorkFrom?</strong></p>
                                 </button>
                             </h2>
                         </div>
 
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                             data-parent="#accordionExample">
-                            <div class="card-body rounded">
-                                Some placeholder content for the first accordion panel. This panel is shown by default,
-                                thanks to the <code>.show</code> class.
+                            <div class="card-body rounded ml-1">
+                                Workfrom merupakan sebuah platform yang menghubungkan penyewa dengan ruang kantor yang
+                                tepat di mana saja di berbagai lokasi. Kami dapat membantu menemukan kebutuhan penyewa
+                                dan pemilik gedung.
                             </div>
                         </div>
                     </div>
@@ -336,15 +357,14 @@
                                 <button class="btn btn-light btn-block text-left collapsed" type="button"
                                     data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
                                     aria-controls="collapseTwo">
-                                    Pertanyaan
+                                    <p style="font-family: 'Roboto-Regular', Helvetica, sans-serif; font-size: 30px;"><strong>Fasilitas apa saja yang ditawarkan?</strong></p>
                                 </button>
                             </h2>
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                             data-parent="#accordionExample">
-                            <div class="card-body rounded">
-                                Some placeholder content for the second accordion panel. This panel is hidden by
-                                default.
+                            <div class="card-body rounded ml-1">
+                                Fasilitas mencakup akses internet berkecepatan tinggi, minuman gratis, area hiburan dan area lounge, serta kesempatan untuk memperluas networking.
                             </div>
                         </div>
                     </div>
@@ -355,22 +375,21 @@
                                 <button class="btn btn-light btn-block text-left collapsed" type="button"
                                     data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
                                     aria-controls="collapseThree">
-                                    Pertanyaan
+                                    <p style="font-family: 'Roboto-Regular', Helvetica, sans-serif; font-size: 30px;"><strong>Apakah buka di akhir pekan dan hari libur?</strong></p>
                                 </button>
                             </h2>
                         </div>
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                             data-parent="#accordionExample">
-                            <div class="card-body rounded">
-                                And lastly, the placeholder content for the third and final accordion panel. This panel
-                                is hidden by default.
+                            <div class="card-body rounded ml-1">
+                                Private Office tutup selama akhir pekan dan hari libur. Tetapi kedepannya bisa terdapat perubahan pada jam operasional kami.
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div style="font-size: 46px; text-align: right; margin: 100px; text-align: left;">
+                <div style="font-size: 46px; text-align: right; margin: 150px; text-align: left;">
                     <p style="color: white;"><strong>Frequently</strong></p>
                     <p style="color: white;"><strong>Asked</strong></p>
                     <p style="color: white;"><strong>Question</strong></p>
@@ -392,7 +411,7 @@
                             <div class="card-body text-left" style="margin-top: 22px; background-color: #eaecf0;">
                                 <h5 class="card-title">Tipsnya Sewa Ruang Kantor Di Jakarta: D..</h5>
                                 <p class="card-text" style="color: #8d8ba7;">8 Oktober 2023</p>
-                                <a href="#" class="btn"><strong>Read More</strong> <svg
+                                <a href="blog.html" class="btn"><strong>Read More</strong> <svg
                                         xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
                                         class="bi bi-chevron-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
@@ -407,7 +426,7 @@
                             <div class="card-body text-left" style="margin-top: 22px; background-color: #eaecf0;">
                                 <h5 class="card-title">5 Meeting Room Hotel Terbaik Di Jakarta U...</h5>
                                 <p class="card-text">4 Oktober 2023</p>
-                                <a href="#" class="btn"><strong>Read More</strong> <svg
+                                <a href="blog.html" class="btn"><strong>Read More</strong> <svg
                                         xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
                                         class="bi bi-chevron-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
@@ -422,7 +441,7 @@
                             <div class="card-body text-left" style="margin-top: 22px; background-color: #eaecf0;">
                                 <h5 class="card-title">Mengenal Jenis-Jenis Meeting Room dan F...</h5>
                                 <p class="card-text">6 Oktober 2023</p>
-                                <a href="#" class="btn"><strong>Read More</strong> <svg
+                                <a href="blog.html" class="btn"><strong>Read More</strong> <svg
                                         xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
                                         class="bi bi-chevron-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
@@ -435,7 +454,7 @@
             </center>
         </div>
         <div class="text-center mt-5">
-            <a href="#" class="btn btn-block"
+            <a href="blog.html" class="btn btn-block"
                 style="width: 25%; padding: 15px; background-color:#aff78d; margin: 70px; margin-left: 740px;"><strong>Jelajahi
                     News
                     Lainnya</strong></a>
@@ -447,35 +466,36 @@
         <div class="container-md mt-5">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="logo m-1" >
+                    <div class="logo m-1">
                         <img id="image-262-12" alt="" src="https://workfrom.id/wp-content/uploads/2022/12/Logo-WF.png"
                             class="ct-image">
                     </div>
-                    <p>Komp. Ruko Centre Point Medan Jalan<br> Timor Blok G No. III/IV 2nd Floor, Gang<br> Buntu, Medan Timur, Medan City, North<br> Sumatra 20231</p>
+                    <p>Komp. Ruko Centre Point Medan Jalan<br> Timor Blok G No. III/IV 2nd Floor, Gang<br> Buntu, Medan
+                        Timur, Medan City, North<br> Sumatra 20231</p>
                 </div>
                 <div class="col-md-2">
                     <h5>Location</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" style="color: black;">Panama</a></li>
-                        <li><a href="#" style="color: black;">Pollock</a></li>
-                        <li><a href="#" style="color: black;">Paradis</a></li>
-                        <li><a href="#" style="color: black;">Parrot</a></li>
+                        <li><a href="location.html" style="color: black;">Panama</a></li>
+                        <li><a href="location.html" style="color: black;">Pollock</a></li>
+                        <li><a href="location.html" style="color: black;">Paradis</a></li>
+                        <li><a href="location.html" style="color: black;">Parrot</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
                     <h5>Use Case</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" style="color: black;">Event</a></li>
-                        <li><a href="#" style="color: black;">Meeting</a></li>
-                        <li><a href="#" style="color: black;">Photo Shoot</a></li>
-                        <li><a href="#" style="color: black;">Video Shoot</a></li>
+                        <li><a href="usecase.html" style="color: black;">Event</a></li>
+                        <li><a href="usecase.html" style="color: black;">Meeting</a></li>
+                        <li><a href="usecase.html" style="color: black;">Photo Shoot</a></li>
+                        <li><a href="usecase.html" style="color: black;">Video Shoot</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
                     <h5>Company</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" style="color: black;">Event</a></li>
-                        <li><a href="#" style="color: black;">Blog</a></li>
+                        <li><a href="blog.html" style="color: black;">Blog</a></li>
                     </ul>
                 </div>
             </div>
@@ -484,6 +504,26 @@
 
 
 
+
+    <script>
+        const form = document.getElementById("myForm");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const inputNama = document.getElementById("inputNama");
+            const inputEmail = document.getElementById("inputEmail");
+            const inputWA = document.getElementById("inputWA");
+
+            if (!inputNama.checkValidity() || !inputEmail.checkValidity() || !inputWA.checkValidity()) {
+                alert("Nama, Email, dan Nomor WhatsApp harus diisi dengan benar.");
+            } else {
+                alert("Formulir telah berhasil diajukan.");
+                form.reset();
+            }
+        });
+    </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
